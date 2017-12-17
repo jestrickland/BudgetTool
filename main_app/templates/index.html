@@ -66,9 +66,9 @@
                             <td>Date</td>
                             <td>Description</td>
                         </tr>
-                        {% for budget_item in budget_items %}
+                        {% for budget_item in budget_items|dictsort:'entry_date' %}
                         <tr class="budget_item">
-                            <td>{{ budget_item.name }}</td>
+                            <td><a href="/{{budget_item.id}}/">{{ budget_item.name }}</a></td>
                             <td>{{ budget_item.amount }}</td>
                             <td>{{ budget_item.entry_date }}</td>
                             <td>{{ budget_item.description }}</td>
