@@ -43,6 +43,18 @@
                     <h2>Header 3</h2><p>The anticipation is killing me!</p>
                 </div>
             </div>
+            <div class="panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Add Budget Item</h3>
+                </div>
+                <div class="'panel-body">
+                    <form action="post_url/" method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </div>
         </div>
     </body>
 </html>
