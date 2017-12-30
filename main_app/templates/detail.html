@@ -3,14 +3,14 @@
 
 {% block content %}
     <div class="container">
-        <div class="navbar-header">
-            <h1><a href="/">Back</a></h1>
-        </div>
-        <div class="row well well-sm">
-            <h2>{{ budget_item.name }}</h2>
-            <h2>{{ budget_item.amount }}</h2>
-            <h2>{{ budget_item.description }}</h2>
-            <h2>{{ budget_item.entry_date }}</h2>
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info">{{ budget_item.name }}</li>
+            <li class="list-group-item">{{ budget_item.amount }}</li>
+            <li class="list-group-item">{{ budget_item.description }}</li>
+            <li class="list-group-item">{{ budget_item.entry_date }}</li>
+        </ul>
+        <div class="col-lg-12">
+            <a class="btn btn-primary" href="/">Back</a>
         </div>
     </div>
 {% endblock %}
