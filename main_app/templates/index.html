@@ -3,9 +3,23 @@
 
 {% block content %}
         <div class="container">
+            <div class="row text-center features">
+                <div class="col-sm-4">
+                    <i class="glyphicon glyphicon-briefcase"></i>
+                    <h2>Header 1</h2><p>This is some test data for the budget tool.</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="glyphicon glyphicon-random"></i>
+                    <h2>Header 2</h2><p>I wonder how all of this is going to turn out?</p>
+                </div>
+                <div class="col-sm-4">
+                    <i class="glyphicon glyphicon-send"></i>
+                    <h2>Header 3</h2><p>The anticipation is killing me!</p>
+                </div>
+            </div>
             <div class="row well well-sm">
-                <div class="col-xs-12 col-sm-6">
-                    <table>
+                <div class="col-sm-12 col-md-6">
+                    <table class="table table-tablestriped">
                         <tr class="table_header">
                             <td>Name</td>
                             <td>Amount</td>
@@ -21,33 +35,19 @@
                         </tr>
                         {% endfor %}
                     </table>
+                    <button type="button" class="btn btn-sm btn-success">Add an Entry</button>
+                    <button type="button" class="btn btn-sm  btn-info">Edit an Entry</button>
+                    <button type="button" class="btn btn-sm  btn-danger">Delete an Entry</button>
                 </div>
-                <div class="col-sm-6 hidden-xs">
+                <div class="col-md-6 hidden-sm">
                     <img src="static/images/budget_header.jpg">
-                </div>
-                <button type="button" class="btn btn-sm btn-success">Add an Entry</button>
-                <button type="button" class="btn btn-sm  btn-info">Edit an Entry</button>
-                <button type="button" class="btn btn-sm  btn-danger">Delete an Entry</button>
-            </div>
-            <div class="row text-center features">
-                <div class="col-sm-4">
-                    <i class="glyphicon glyphicon-briefcase"></i>
-                    <h2>Header 1</h2><p>This is some test data for the budget tool.</p>
-                </div>
-                <div class="col-sm-4">
-                    <i class="glyphicon glyphicon-random"></i>
-                    <h2>Header 2</h2><p>I wonder how all of this is going to turn out?</p>
-                </div>
-                <div class="col-sm-4">
-                    <i class="glyphicon glyphicon-send"></i>
-                    <h2>Header 3</h2><p>The anticipation is killing me!</p>
                 </div>
             </div>
             <div class="panel-default">
                 <div class="panel-heading">
                     <h3 class="panel-title">Add Budget Item</h3>
                 </div>
-                <div class="'panel-body">
+                <div class="panel-body">
                     <form action="post_url/" method="post">
                         {% csrf_token %}
                         {{ form.as_p }}
