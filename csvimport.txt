@@ -7,7 +7,7 @@ print(df)
 
 df_records = df.to_dict('records')
 
-model_instances = [Budget_Item(name=record['name'],amount=record['amount'],entry_month=record['entry_month'],entry_day=record['entry_day'],entry_year=record['entry_year'],entry_date=['entry_date'],description=record['description']) for record in df_records]
+model_instances = [Budget_Item(name=record['name'],amount=record['amount'],expend_category=record['expend_category'],entry_month=record['entry_month'],entry_day=record['entry_day'],entry_year=record['entry_year'],description=record['description']) for record in df_records]
 
 Budget_Item.objects.bulk_create(model_instances)
 

@@ -5,16 +5,16 @@
         <div class="container">
             <div class="row text-center features">
                 <div class="col-sm-4">
-                    <i class="glyphicon glyphicon-briefcase"></i>
-                    <h2>Header 1</h2><p>This is some test data for the budget tool.</p>
+                    <i class="glyphicon glyphicon-pawn"></i>
+                    <h2>Today</h2><p>Entries for today.</p>
                 </div>
                 <div class="col-sm-4">
-                    <i class="glyphicon glyphicon-random"></i>
-                    <h2>Header 2</h2><p>I wonder how all of this is going to turn out?</p>
+                    <i class="glyphicon glyphicon-knight"></i>
+                    <h2>Month to Date</h2><p>A month to date summary.</p>
                 </div>
                 <div class="col-sm-4">
-                    <i class="glyphicon glyphicon-send"></i>
-                    <h2>Header 3</h2><p>The anticipation is killing me!</p>
+                    <i class="glyphicon glyphicon-king"></i>
+                    <h2>Year to Date</h2><p>A year to date summary.</p>
                 </div>
             </div>
             <div class="row well well-sm">
@@ -22,20 +22,20 @@
                     <table class="table table-tablestriped">
                         <tr class="table_header">
                             <td>Name</td>
+                            <td>Category</td>
                             <td>Amount</td>
                             <td>Entry Month</td>
                             <td>Entry Day</td>
                             <td>Entry Year</td>
-                            <td>Description</td>
                         </tr>
-                        {% for budget_item in budget_items|dictsort:'entry_day'|dictsort:'entry_month'|dictsort:'entry_year' %}
+                        {% for budget_item in budget_items|dictsort:'entry_day'|dictsort:'entry_month'|dictsort:'entry_year'|dictsort:'expend_category' %}
                         <tr class="budget_item">
                             <td><a href="/{{budget_item.id}}/">{{ budget_item.name }}</a></td>
+                            <td>{{ budget_item.expend_category }}</td>
                             <td>{{ budget_item.amount }}</td>
                             <td>{{ budget_item.entry_month }}</td>
                             <td>{{ budget_item.entry_day }}</td>
                             <td>{{ budget_item.entry_year }}</td>
-                            <td>{{ budget_item.description }}</td>
                         </tr>
                         {% endfor %}
                     </table>
