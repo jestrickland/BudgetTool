@@ -1,50 +1,50 @@
-id,user,name,amount,entry_month,entry_day,entry_year,entry_date,description
-10,1,Durango Giant,20.01,10,3,2017,2017-10-03,Test Data
-11,1,Durango Giant,37,10,7,2017,2017-10-07,Test Data
-12,1,Durango Giant,15.01,10,16,2017,2017-10-16,Test Data
-13,1,Exxon Durango,20,10,19,2017,2017-10-19,Test Data
-14,1,Durango Conoco,20,10,26,2017,2017-10-26,Test Data
-15,1,Exxon Durango,10,10,28,2017,2017-10-28,Test Data
-16,1,Durango Joe's,8.89,10,1,2017,2017-10-01,Test Data
-17,1,Rice Monkey,13,10,1,2017,2017-10-01,Test Data
-18,1,Steamworks,13,10,3,2017,2017-10-03,Test Data
-19,1,Silver Bean,10,10,5,2017,2017-10-05,Test Data
-20,1,Stonefish,34,10,6,2017,2017-10-06,Test Data
-21,1,Tequilas,18,10,6,2017,2017-10-06,Test Data
-22,1,Zia,9.36,10,7,2017,2017-10-7,Test Data
-23,1,Irish Embassy,7,10,7,2017,2017-10-07,Test Data
-24,1,Zia,9.36,10,9,2017,2017-10-09,Test Data
-25,1,Silver Bean,10,10,11,2017,2017-10-11,Test Data
-26,1,Irish Embassy,24,10,11,2017,2017-10-11,Test Data
-27,1,Carver's,24,10,14,2017,2017-10-14,Test Data
-28,1,Silver Bean,10,10,19,2017,2017-10-19,Test Data
-29,1,Silver Bean,10,10,20,2017,2017-10-20,Test Data
-30,1,Stonefish,18,10,20,2017,2017-10-20,Test Data
-31,1,Zia,10,10,21,2017,2017-10-21,Test Data
-32,1,The Farm,24,10,26,2017,2017-10-26,Dinner with Jamie
-33,1,Durango Joe's,9,10,27,2017,2017-10-27,Test Data
-34,1,Stonefish,16,10,27,2017,2017-10-27,Test Data
-35,1,Oscar's,15,10,28,2017,2017-10-28,Test Data
-36,1,Halloween Beer,14,10,29,2017,2017-10-29,Bar Hopping
-37,1,Grassburger,14,10,29,2017,2017-10-29,Lunch with Chris
-38,1,City Market,71.92,10,1,2017,2017-10-01,Test Data
-39,1,City Market,59.37,10,8,2017,2017-10-08,Test Data
-40,1,Mac's Liquor,10,10,12,2017,2017-10-12,Test Data
-41,1,Nature's Oasis,93.95,10,14,2017,2017-10-14,Test Data
-42,1,City Market,5.92,10,15,2017,2017-10-15,Test Data
-43,1,Nature's Oasis,14,10,17,2017,2017-10-17,Test Data
-44,1,Safeway Cortez,7.81,10,19,2017,2017-10-19,Test Data
-45,1,City Market,42.79,10,22,2017,2017-10-22,Test Data
-46,1,Mac's Liquor,9.14,10,27,2017,2017-10-27,Test Data
-47,1,City Market,5.24,10,27,2017,2017-10-27,Test Data
-48,1,City Market,57.71,10,29,2017,2017-10-29,Test Data
-49,1,Playstation Store Card,50,10,1,2017,2017-10-01,Test Data
-50,1,Four Corners Fitness,55,10,2,2017,2017-10-02,Test Data
-51,1,Maria's Bookshop,17.25,10,6,2017,2017-10-06,Test Data
-52,1,Durango Theater,8,10,7,2017,2017-10-07,Test Data
-53,1,MakerLab,45,10,15,2017,2017-10-15,Test Data
-54,1,MakerLab Class,20,10,17,2017,2017-10-17,Electronics Class
-55,1,Walmart,20.09,10,30,2017,2017-10-30,Prop Materials
-56,1,Ace Hardware,22,10,7,2017,2017-10-07,Test Data
-57,1,Car Wash,8,10,8,2017,2017-10-08,Test Data
-58,1,Ace Hardware,5,10,19,2017,2017-10-19,Test Data
+id,user,user_id,name,amount,entry_month,entry_day,entry_year,entry_date,description
+10,jasonstrickland,1,Durango Giant,20.01,10,3,2017,2017-10-03,Test Data
+11,jasonstrickland,1,Durango Giant,37,10,7,2017,2017-10-07,Test Data
+12,jasonstrickland,1,Durango Giant,15.01,10,16,2017,2017-10-16,Test Data
+13,jasonstrickland,1,Exxon Durango,20,10,19,2017,2017-10-19,Test Data
+14,jasonstrickland,1,Durango Conoco,20,10,26,2017,2017-10-26,Test Data
+15,jasonstrickland,1,Exxon Durango,10,10,28,2017,2017-10-28,Test Data
+16,jasonstrickland,1,Durango Joe's,8.89,10,1,2017,2017-10-01,Test Data
+17,jasonstrickland,1,Rice Monkey,13,10,1,2017,2017-10-01,Test Data
+18,jasonstrickland,1,Steamworks,13,10,3,2017,2017-10-03,Test Data
+19,jasonstrickland,1,Silver Bean,10,10,5,2017,2017-10-05,Test Data
+20,jasonstrickland,1,Stonefish,34,10,6,2017,2017-10-06,Test Data
+21,jasonstrickland,1,Tequilas,18,10,6,2017,2017-10-06,Test Data
+22,jasonstrickland,1,Zia,9.36,10,7,2017,2017-10-07,Test Data
+23,jasonstrickland,1,Irish Embassy,7,10,7,2017,2017-10-07,Test Data
+24,jasonstrickland,1,Zia,9.36,10,9,2017,2017-10-09,Test Data
+25,jasonstrickland,1,Silver Bean,10,10,11,2017,2017-10-11,Test Data
+26,jasonstrickland,1,Irish Embassy,24,10,11,2017,2017-10-11,Test Data
+27,jasonstrickland,1,Carver's,24,10,14,2017,2017-10-14,Test Data
+28,jasonstrickland,1,Silver Bean,10,10,19,2017,2017-10-19,Test Data
+29,jasonstrickland,1,Silver Bean,10,10,20,2017,2017-10-20,Test Data
+30,jasonstrickland,1,Stonefish,18,10,20,2017,2017-10-20,Test Data
+31,jasonstrickland,1,Zia,10,10,21,2017,2017-10-21,Test Data
+32,jasonstrickland,1,The Farm,24,10,26,2017,2017-10-26,Dinner with Jamie
+33,jasonstrickland,1,Durango Joe's,9,10,27,2017,2017-10-27,Test Data
+34,jasonstrickland,1,Stonefish,16,10,27,2017,2017-10-27,Test Data
+35,jasonstrickland,1,Oscar's,15,10,28,2017,2017-10-28,Test Data
+36,jasonstrickland,1,Halloween Beer,14,10,29,2017,2017-10-29,Bar Hopping
+37,jasonstrickland,1,Grassburger,14,10,29,2017,2017-10-29,Lunch with Chris
+38,jasonstrickland,1,City Market,71.92,10,1,2017,2017-10-01,Test Data
+39,jasonstrickland,1,City Market,59.37,10,8,2017,2017-10-08,Test Data
+40,jasonstrickland,1,Mac's Liquor,10,10,12,2017,2017-10-12,Test Data
+41,jasonstrickland,1,Nature's Oasis,93.95,10,14,2017,2017-10-14,Test Data
+42,jasonstrickland,1,City Market,5.92,10,15,2017,2017-10-15,Test Data
+43,jasonstrickland,1,Nature's Oasis,14,10,17,2017,2017-10-17,Test Data
+44,jasonstrickland,1,Safeway Cortez,7.81,10,19,2017,2017-10-19,Test Data
+45,jasonstrickland,1,City Market,42.79,10,22,2017,2017-10-22,Test Data
+46,jasonstrickland,1,Mac's Liquor,9.14,10,27,2017,2017-10-27,Test Data
+47,jasonstrickland,1,City Market,5.24,10,27,2017,2017-10-27,Test Data
+48,jasonstrickland,1,City Market,57.71,10,29,2017,2017-10-29,Test Data
+49,jasonstrickland,1,Playstation Store Card,50,10,1,2017,2017-10-01,Test Data
+50,jasonstrickland,1,Four Corners Fitness,55,10,2,2017,2017-10-02,Test Data
+51,jasonstrickland,1,Maria's Bookshop,17.25,10,6,2017,2017-10-06,Test Data
+52,jasonstrickland,1,Durango Theater,8,10,7,2017,2017-10-07,Test Data
+53,jasonstrickland,1,MakerLab,45,10,15,2017,2017-10-15,Test Data
+54,jasonstrickland,1,MakerLab Class,20,10,17,2017,2017-10-17,Electronics Class
+55,jasonstrickland,1,Walmart,20.09,10,30,2017,2017-10-30,Prop Materials
+56,jasonstrickland,1,Ace Hardware,22,10,7,2017,2017-10-07,Test Data
+57,jasonstrickland,1,Car Wash,8,10,8,2017,2017-10-08,Test Data
+58,jasonstrickland,1,Ace Hardware,5,10,19,2017,2017-10-19,Test Data

@@ -4,7 +4,7 @@ from .models import Budget_Item
 class BudgetForm(forms.ModelForm):
     class Meta:
         model = Budget_Item
-        fields = ['name', 'amount', 'entry_month', 'entry_day', 'entry_year', 'entry_date', 'description']
+        fields = ['name', 'expend_category', 'amount', 'entry_month', 'entry_day', 'entry_year', 'description']
 
 
 

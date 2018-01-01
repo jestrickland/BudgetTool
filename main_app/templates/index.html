@@ -23,14 +23,18 @@
                         <tr class="table_header">
                             <td>Name</td>
                             <td>Amount</td>
-                            <td>Date</td>
+                            <td>Entry Month</td>
+                            <td>Entry Day</td>
+                            <td>Entry Year</td>
                             <td>Description</td>
                         </tr>
-                        {% for budget_item in budget_items|dictsort:'entry_date' %}
+                        {% for budget_item in budget_items|dictsort:'entry_day' %}
                         <tr class="budget_item">
                             <td><a href="/{{budget_item.id}}/">{{ budget_item.name }}</a></td>
                             <td>{{ budget_item.amount }}</td>
-                            <td>{{ budget_item.entry_date }}</td>
+                            <td>{{ budget_item.entry_month }}</td>
+                            <td>{{ budget_item.entry_day }}</td>
+                            <td>{{ budget_item.entry_year }}</td>
                             <td>{{ budget_item.description }}</td>
                         </tr>
                         {% endfor %}
@@ -41,18 +45,6 @@
                 </div>
                 <div class="col-md-6 hidden-sm">
                     <img src="static/images/budget_header.jpg">
-                </div>
-            </div>
-            <div class="panel-default">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Add Budget Item</h3>
-                </div>
-                <div class="panel-body">
-                    <form action="post_url/" method="post">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <input type="submit" value="Submit" />
-                    </form>
                 </div>
             </div>
         </div>
