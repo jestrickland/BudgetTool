@@ -6,7 +6,21 @@
             <div class="row text-center features">
                 <div class="col-sm-4">
                     <i class="glyphicon glyphicon-pawn"></i>
-                    <h2>Today</h2><p>Entries for today.</p>
+                    <h2>Today</h2><p class="text-left">Entries for today.</p>
+                    {% regroup budget_items by expend_category as expend_list %}
+                    <ul class="text-left">
+                    {% for expend_category in expend_list %}
+                        <li>{{ expend_category.grouper }}
+                            <ul>
+                                {% for budget_item in expend_category.list %}
+                                    {% if budget_item.entry_day == 1 %}
+                                      <li>{{ budget_item.name }}: {{ budget_item.amount }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                    </ul>
                 </div>
                 <div class="col-sm-4">
                     <i class="glyphicon glyphicon-knight"></i>
