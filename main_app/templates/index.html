@@ -6,16 +6,16 @@
             <div class="row text-center features">
                 <div class="col-sm-4">
                     <i class="glyphicon glyphicon-pawn"></i>
-                    <h2>Today</h2><p class="text-left">Entries for today.</p>
-                    {% regroup budget_items by expend_category as expend_list %}
+                    <h2>Current</h2><p class="text-left">Entries for today.</p>
+                    {% regroup budget_items_current by expend_category as expend_list %}
                     <ul class="text-left">
                     {% for expend_category in expend_list %}
                         <li>{{ expend_category.grouper }}
                             <ul>
-                                {% for budget_item in expend_category.list %}
-                                    {% if budget_item.entry_day == 1 %}
-                                      <li>{{ budget_item.name }}: {{ budget_item.amount }}</li>
-                                    {% endif %}
+                                {% for budget_item_current in expend_category.list %}
+
+                                      <li>{{ budget_item_current.name }}: {{ budget_item_current.amount }}</li>
+
                                 {% endfor %}
                             </ul>
                         </li>
@@ -24,11 +24,37 @@
                 </div>
                 <div class="col-sm-4">
                     <i class="glyphicon glyphicon-knight"></i>
-                    <h2>Month to Date</h2><p>A month to date summary.</p>
+                    <h2>Month to Date</h2><p class="text-left">A month to date summary.</p>
+                    {% regroup budget_items_mtd by expend_category as expend_list %}
+                    <ul class="text-left">
+                    {% for expend_category in expend_list %}
+                        <li>{{ expend_category.grouper }}
+                            <ul>
+                                {% for budget_item_mtd in expend_category.list %}
+
+                                      <li>{{ budget_item_mtd.name }}: {{ budget_item_mtd.amount }}</li>
+
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
                 </div>
                 <div class="col-sm-4">
                     <i class="glyphicon glyphicon-king"></i>
-                    <h2>Year to Date</h2><p>A year to date summary.</p>
+                    <h2>Year to Date</h2><p class="text-left">A year to date summary.</p>
+                    {% regroup budget_items_ytd by expend_category as expend_list %}
+                    <ul class="text-left">
+                    {% for expend_category in expend_list %}
+                        <li>{{ expend_category.grouper }}
+                            <ul>
+                                {% for budget_item_ytd in expend_category.list %}
+
+                                      <li>{{ budget_item_ytd.name }}: {{ budget_item_ytd.amount }}</li>
+
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
                 </div>
             </div>
             <div class="row well well-sm">
@@ -42,7 +68,7 @@
                             <td>Entry Day</td>
                             <td>Entry Year</td>
                         </tr>
-                        {% for budget_item in budget_items|dictsort:'entry_day'|dictsort:'entry_month'|dictsort:'entry_year'|dictsort:'expend_category' %}
+                        {% for budget_item in budget_items_ytd|dictsort:'entry_day'|dictsort:'entry_month'|dictsort:'entry_year'|dictsort:'expend_category' %}
                         <tr class="budget_item">
                             <td><a href="/{{budget_item.id}}/">{{ budget_item.name }}</a></td>
                             <td>{{ budget_item.expend_category }}</td>
@@ -56,9 +82,6 @@
                     <button type="button" class="btn btn-sm btn-success">Add an Entry</button>
                     <button type="button" class="btn btn-sm  btn-info">Edit an Entry</button>
                     <button type="button" class="btn btn-sm  btn-danger">Delete an Entry</button>
-                </div>
-                <div class="col-md-6 hidden-sm">
-                    <img src="static/images/budget_header.jpg">
                 </div>
             </div>
         </div>

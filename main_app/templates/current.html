@@ -8,12 +8,20 @@
                 <td>Name</td>
                 <td>Category</td>
                 <td>Amount</td>
+                <td>Description</td>
+                <td>Entry Month</td>
+                <td>Entry Day</td>
+                <td>Entry Year</td>
             </tr>
-            {% for budget_item in budget_items|dictsort:'expend_category' %}
+            {% for budget_item_current in budget_items_current|dictsort:'expend_category' %}
             <tr class="budget_item">
-                <td>{{ budget_item_current.name }}</td>
+                <td><a href="/{{budget_item.id}}/">{{ budget_item_current.name }}</a></td>
                 <td>{{ budget_item_current.expend_category }}</td>
                 <td>{{ budget_item_current.amount }}</td>
+                <td>{{ budget_item_current.description }}</td>
+                <td>{{ budget_item_current.entry_month }}</td>
+                <td>{{ budget_item_current.entry_day }}</td>
+                <td>{{ budget_item_current.entry_year }}</td>
             </tr>
             {% endfor %}
         </table>

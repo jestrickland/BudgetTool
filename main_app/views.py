@@ -7,17 +7,19 @@ from .forms import BudgetForm
 import datetime
 
 now = datetime.datetime.now()
+budget_items_current = Budget_Item.objects.filter(entry_day=now.day, entry_month=now.month, entry_year=now.year)
+budget_items_mtd = Budget_Item.objects.filter(entry_month=now.month, entry_year=now.year)
+budget_items_ytd = Budget_Item.objects.filter(entry_year=now.year)
 
 #Main View
 def index(request):
     budget_items = Budget_Item.objects.all()
     form = BudgetForm
-    return render(request, 'index.html', {'budget_items':budget_items, 'form':form})
+    return render(request, 'index.html', {'budget_items':budget_items, 'budget_items_current':budget_items_current, 'budget_items_mtd':budget_items_mtd,'budget_items_ytd':budget_items_ytd,'form':form})
 
 #Current Day View
 def current(request):
-    budget_item_current = Budget_Item.objects.get(entry_day = now.day, entry_month = now.month, entry_year = now.year)
-    return render(request, 'current.html', {'budget_item_current':budget_item_current})
+    return render(request, 'current.html', {'budget_items_current':budget_items_current})
 
 #Detail View
 def detail(request, Budget_Item_id):
