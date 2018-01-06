@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container">
+        <table class="table table-tablestriped">
+            <tr class="table_header">
+                <td>Name</td>
+                <td>Category</td>
+                <td>Amount</td>
+                <td>Description</td>
+                <td>Entry Month</td>
+                <td>Entry Day</td>
+                <td>Entry Year</td>
+            </tr>
+            {% for budget_item_ytd in budget_items_ytd|dictsort:'expend_category' %}
+            <tr class="budget_item">
+                <td><a href="/{{budget_item.id}}/">{{ budget_item_ytd.name }}</a></td>
+                <td>{{ budget_item_ytd.expend_category }}</td>
+                <td>{{ budget_item_ytd.amount }}</td>
+                <td>{{ budget_item_ytd.description }}</td>
+                <td>{{ budget_item_ytd.entry_month }}</td>
+                <td>{{ budget_item_ytd.entry_day }}</td>
+                <td>{{ budget_item_ytd.entry_year }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <div class="col-lg-12">
+            <a class="btn btn-primary" href="/">Back</a>
+        </div>
+    </div>
+{% endblock %}

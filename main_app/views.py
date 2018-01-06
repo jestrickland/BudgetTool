@@ -4,12 +4,19 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import Budget_Item
 from .forms import BudgetForm
-import datetime
+#import datetime
+from datetime import datetime, timedelta, date
 
-now = datetime.datetime.now()
+#Current Date Structure
+now = datetime.now()
 budget_items_current = Budget_Item.objects.filter(entry_day=now.day, entry_month=now.month, entry_year=now.year)
 budget_items_mtd = Budget_Item.objects.filter(entry_month=now.month, entry_year=now.year)
 budget_items_ytd = Budget_Item.objects.filter(entry_year=now.year)
+
+#Rolling Date Structure
+#entry_date = date(Budget_Item.objects.get(entry_year))
+#nowminus7 = now - timedelta(days=7)
+#budget_items_7day = Budget_Item.objects.filter(entry_day__gte=now.day, entry_day__lte=nowminus7.day, entry_month__gte=now.month, entry_month__lte=nowminus7.month, entry_year__gte=now.year, entry_year__lte=nowminus7.year)
 
 #Main View
 def index(request):
@@ -20,6 +27,14 @@ def index(request):
 #Current Day View
 def current(request):
     return render(request, 'current.html', {'budget_items_current':budget_items_current})
+
+#Month to Date Day View
+def monthtodate(request):
+    return render(request, 'monthtodate.html', {'budget_items_mtd':budget_items_mtd})
+
+#Year to Date Day View
+def yeartodate(request):
+    return render(request, 'yeartodate.html', {'budget_items_ytd':budget_items_ytd})
 
 #Detail View
 def detail(request, Budget_Item_id):
