@@ -27,7 +27,19 @@
             </div>
             <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
                 <li>
-                    <a href="main.html" data-target='#' data-toggle="dropdown">Views <span class="caret"></span></a>
+                    <a href="/" data-target='#' data-toggle="dropdown">Add Budget Item <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form action="post_url/" method="post" class="post-form">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <input type="submit" value="Submit" />
+                            </form>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/" data-target='#' data-toggle="dropdown">Views <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/">Main</a></li>
                         <li class="divider"></li>
@@ -58,14 +70,7 @@
 
         <div class="panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">Add Budget Item</h3>
-            </div>
-            <div class="panel-body">
-                <form action="post_url/" method="post">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Submit" />
-                </form>
+                <h3 class="panel-title">Placeholder Footer</h3>
             </div>
         </div>
 

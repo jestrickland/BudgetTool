@@ -26,20 +26,24 @@ def index(request):
 
 #Current Day View
 def current(request):
-    return render(request, 'current.html', {'budget_items_current':budget_items_current})
+    form = BudgetForm
+    return render(request, 'current.html', {'budget_items_current':budget_items_current,'form':form})
 
 #Month to Date Day View
 def monthtodate(request):
-    return render(request, 'monthtodate.html', {'budget_items_mtd':budget_items_mtd})
+    form = BudgetForm
+    return render(request, 'monthtodate.html', {'budget_items_mtd':budget_items_mtd,'form':form})
 
 #Year to Date Day View
 def yeartodate(request):
-    return render(request, 'yeartodate.html', {'budget_items_ytd':budget_items_ytd})
+    form = BudgetForm
+    return render(request, 'yeartodate.html', {'budget_items_ytd':budget_items_ytd,'form':form})
 
 #Detail View
 def detail(request, Budget_Item_id):
+    form = BudgetForm
     budget_item = Budget_Item.objects.get(id=Budget_Item_id)
-    return render(request, 'detail.html', {'budget_item':budget_item})
+    return render(request, 'detail.html', {'budget_item':budget_item,'form':form})
 
 #User Name View
 def profile(request, username):
